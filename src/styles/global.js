@@ -21,9 +21,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: var(--cc-bg);
-    color: var(--cc-text);
+    background: #141414;
+    color: #ffffff;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
 
   body::-webkit-scrollbar {
