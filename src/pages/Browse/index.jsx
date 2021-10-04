@@ -1,5 +1,6 @@
 import Header from '../../components/LoggedComponents/Header';
 import Banner from '../../components/LoggedComponents/Banner';
+import WrapperCarousel from '../../components/LoggedComponents/WrapperCarousel';
 import Carousel from '../../components/LoggedComponents/Carousel';
 
 import { Container } from './styles';
@@ -9,10 +10,12 @@ export default function Browse() {
     <Container>
       <Header />
       <Banner />
-      <Carousel />
-      <Carousel />
-      <Carousel />
-      <Carousel />
+      <WrapperCarousel>
+        <Carousel />
+        <Carousel />
+        <Carousel />
+        <Carousel />
+      </WrapperCarousel>
     </Container>
   );
 }

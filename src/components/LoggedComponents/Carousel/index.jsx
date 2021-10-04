@@ -6,7 +6,7 @@ import {
   Container, Header, Content, SlideGalery, Card,
 } from './styles';
 
-export default function Carousel() {
+export default function Carousel({ banner }) {
   const carousel = useRef(null);
 
   function handleLeftClick() {
@@ -18,7 +18,7 @@ export default function Carousel() {
   }
 
   return (
-    <Container>
+    <Container banner={banner}>
       <Header>
         <h1>Carousel</h1>
         <div>
