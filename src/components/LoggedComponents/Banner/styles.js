@@ -20,13 +20,17 @@ export const Content = styled.section`
   align-items: center;
   justify-content: flex-start;
 
+  img {
+    width: 100%;
+  }
+
   div {
-    width: 750px;
+    max-width: 40%;
     height: auto;
   }
 
   p {
-    width: 500px;
+    max-width: 500px;
     font-size: 1.5rem;
     margin: 1rem 0 2rem 0;
     //font-weight: bold;

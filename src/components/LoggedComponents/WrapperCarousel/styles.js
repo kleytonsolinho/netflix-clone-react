@@ -5,5 +5,5 @@ export const Container = styled.div`
   height: auto;
 
   position: relative;
-  top: -150px
+  top: -140px
 `;
