@@ -14,7 +14,9 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  background-image: linear-gradient(to bottom, #000000, transparent);
+  background: ${((props) => (props.isBlack ? '#000000' : 'linear-gradient(to bottom, #000000, transparent)'))};
+
+  transition: 1s all;
 `;
 
 export const NavMenu = styled.nav`
