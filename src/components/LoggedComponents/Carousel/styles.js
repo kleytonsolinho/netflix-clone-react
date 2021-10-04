@@ -20,9 +20,9 @@ export const Header = styled.div`
   cursor: pointer;
 
   &:hover {
-    span {
+    span, .icon {
+      left: 0px;
       opacity: 1;
-      left: 0;
     }
   }
 
@@ -32,54 +32,68 @@ export const Header = styled.div`
     margin-bottom: 0.8rem;
   }
 
-  span {
+  div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     position: relative;
-    left: -150px;
-    opacity: 0;
+  }
 
-    transition: 1s all;
-
+  span {
     margin-left: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+
+    position: relative;
+    left: -110px;
+
+    opacity: 0;
+
+    transition: 1s all;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    position: relative;
+    left: -110px;
+
+    opacity: 0;
+
+    transition:
+      1s opacity,
+      0.2s left;
   }
 `;
 
 export const Content = styled.div`
-  min-width: auto;
+  width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
-`;
 
-export const Controls = styled.nav`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
 
   button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0;
+    z-index: 2;
 
     width: 70px;
     height: 100%;
     background: transparent;
     border: none;
+    opacity: 0;
 
-    color: yellow;
+    color: #ffffff;
     font-size: 5rem;
 
     transition: 0.5s all;
@@ -101,16 +115,21 @@ export const Controls = styled.nav`
 export const SlideGalery = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   position: relative;
+  z-index: 1;
 
   overflow-y: scroll;
   overflow-x: hidden;
   white-space: nowrap;
+
   scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
-export const Card = styled.div`
+export const Card = styled.a`
   width: 320px;
   height: 180px;
   display: inline-block;
@@ -130,5 +149,9 @@ export const Card = styled.div`
 
   > div {
     margin: 2px;
+  }
+
+  &:hover {
+    background: gray;
   }
 `;

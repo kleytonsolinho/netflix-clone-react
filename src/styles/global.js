@@ -32,7 +32,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-thumb {
-    background: #202227;
+    background: red;
+    border-radius: 2px;
   }
 
   body::-webkit-scrollbar-track {

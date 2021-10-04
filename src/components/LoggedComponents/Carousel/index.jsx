@@ -1,29 +1,41 @@
+import { useRef } from 'react';
+
 import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 
 import {
-  Container, Header, Content, SlideGalery, Controls, Card,
+  Container, Header, Content, SlideGalery, Card,
 } from './styles';
 
 export default function Carousel() {
+  const carousel = useRef(null);
+
+  function handleLeftClick() {
+    carousel.current.scrollLeft -= 250;
+  }
+
+  function handleRightClick() {
+    carousel.current.scrollLeft += 250;
+  }
+
   return (
     <Container>
       <Header>
         <h1>Carousel</h1>
-        <span>
-          Ver tudo
-          <FaAngleRight />
-        </span>
+        <div>
+          <span>
+            Ver tudo
+          </span>
+          <FaAngleRight className="icon" />
+        </div>
       </Header>
       <Content>
-        <Controls>
-          <button type="button" onClick="">
-            <FaAngleLeft />
-          </button>
-          <button type="button" onClick="">
-            <FaAngleRight />
-          </button>
-        </Controls>
-        <SlideGalery>
+        <button type="button" onClick={handleLeftClick}>
+          <FaAngleLeft />
+        </button>
+        <button type="button" onClick={handleRightClick}>
+          <FaAngleRight />
+        </button>
+        <SlideGalery ref={carousel}>
           <Card>1</Card>
           <Card>2</Card>
           <Card>3</Card>

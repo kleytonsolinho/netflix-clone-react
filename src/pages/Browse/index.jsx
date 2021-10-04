@@ -10,6 +10,9 @@ export default function Browse() {
       <Header />
       <Banner />
       <Carousel />
+      <Carousel />
+      <Carousel />
+      <Carousel />
     </Container>
   );
 }
